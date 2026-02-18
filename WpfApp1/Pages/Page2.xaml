@@ -9,6 +9,17 @@
       Title="Page2">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Image Source="/Image/Image1.png" Height="80" Margin="20"/>
+            <TextBox Height="20" Width="100" Margin="5"/>
+        </StackPanel>
     </Grid>
 </Page>
