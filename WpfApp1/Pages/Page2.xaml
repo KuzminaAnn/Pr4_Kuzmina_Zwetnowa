@@ -10,16 +10,31 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="200"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
-        <StackPanel>
-            <Image Source="/Image/Image1.png" Height="80" Margin="20"/>
-            <TextBox Height="20" Width="100" Margin="5"/>
-        </StackPanel>
+        <Image Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Source="/Image/Image1.png" Height="80" Margin="20"/>
+        <TextBox x:Name="x" Grid.Row="1" Grid.Column="2" Height="20" Width="80"/>
+        <TextBox x:Name="y" Grid.Row="2" Grid.Column="2" Height="20" Width="80"/>
+        <TextBox x:Name="z" Grid.Row="3" Grid.Column="2" Height="20" Width="80"/>
+        <TextBox x:Name="answer" Grid.Row="4" Grid.Column="2" Height="20" Width="80"/>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="x" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="y" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="z" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="4" Grid.Column="1" Text="Ответ:" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <Button Grid.Row="3" Grid.Column="3" Content="Вычислить" Height="20" Width="80" Click="Button_Click"/>
+        <Button Grid.Row="4" Grid.Column="3" Content="Очистить" Height="20" Width="80" Click="Button_Click_1"/>
     </Grid>
 </Page>
