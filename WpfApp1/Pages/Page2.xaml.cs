@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Math;
 
 namespace WpfApp1.Pages
 {
@@ -26,7 +27,12 @@ namespace WpfApp1.Pages
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            float.TryParse(x.Text, out float xx);
+            float.TryParse(y.Text, out float yy);
+            float.TryParse(z.Text, out float zz);
 
+            Class1.otv = (float)(Pow(10 * (Pow(xx, 1/3) + Pow(xx, yy + 2)), 0.5) * (Pow(Asin(zz), 2) - Abs(xx - yy)));
+            answer.Text = Convert.ToString(Class1.otv);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
