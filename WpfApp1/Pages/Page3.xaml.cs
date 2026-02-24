@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Math;
 
 namespace WpfApp1.Pages
 {
@@ -40,16 +41,44 @@ namespace WpfApp1.Pages
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             float.TryParse(b.Text, out float bb);
+            float.TryParse(x.Text, out float xx);
+
+            if (0.5 < xx * bb && xx * bb < 10)
+            {
+                Class1.otv = (float)Exp(Sinh(xx) - Abs(bb));
+            }
+            else if (0.1 < xx * bb && xx * bb < 0.5)
+            {
+                Class1.otv = (float)Pow(Abs(Sinh(xx) + bb), 0.5);
+            }
+            else
+            {
+                Class1.otv = (float)(2 * Pow(Sinh(xx), 2));
+            }
         }
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
+            float.TryParse(b.Text, out float bb);
+            float.TryParse(x.Text, out float xx);
 
+            if (0.5 < xx * bb && xx * bb < 10)
+            {
+                Class1.otv = (float)Exp(Sinh(xx) - Abs(bb));
+            }
+            else if (0.1 < xx * bb && xx * bb < 0.5)
+            {
+                Class1.otv = (float)Pow(Abs(Sinh(xx) + bb), 0.5);
+            }
+            else
+            {
+                Class1.otv = (float)(2 * Pow(Sinh(xx), 2));
+            }
         }
-
         private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
         {
-
+            float.TryParse(b.Text, out float bb);
+            float.TryParse(x.Text, out float xx);
         }
     }
 }
