@@ -23,6 +23,8 @@ namespace WpfApp1.Pages
         public Page3()
         {
             InitializeComponent();
+            
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -37,7 +39,7 @@ namespace WpfApp1.Pages
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-
+            float.TryParse(b.Text, out float bb);
         }
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
