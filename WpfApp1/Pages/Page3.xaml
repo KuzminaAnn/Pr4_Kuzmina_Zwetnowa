@@ -10,15 +10,34 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="150"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <RowColumnDefenition />
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
-                <Image Grid.Row="0" Grid.Column="0" Source="/Image/Image2.png" Height="120" Margin="20" HorizontalAlignment="Center" />
-
-        <TextBox Height="40" Width="100" HorizontalAlignment="Center"/>
-
+        <Image Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Source="/Image/Image2.png" Height="120" Margin="20" HorizontalAlignment="Center"/>
+        <TextBox x:Name="x" Grid.Row="1" Grid.Column="2" Height="20" Width="80" />
+        <TextBox x:Name="b" Grid.Row="2" Grid.Column="2" Height="20" Width="80" />
+        <TextBox x:Name="answer" Grid.Row="6" Grid.Column="2" Height="20" Width="80" />
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="x" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="b" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="6" Grid.Column="1" Text="Ответ:" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <Button Grid.Row="5" Grid.Column="3" Content="Вычислить" Height="20" Width="80" Click="Button_Click"/>
+        <Button Grid.Row="6" Grid.Column="3" Content="Очистить" Height="20" Width="80" Click="Button_Click_1"/>
+        <RadioButton Grid.Row="3" Grid.Column="2" Content="(sh)x" FontSize="20" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Checked="RadioButton_Checked"/>
+        <RadioButton Grid.Row="4" Grid.Column="2" Content="x^2" FontSize="20" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Checked="RadioButton_Checked_1"/>
+        <RadioButton Grid.Row="5" Grid.Column="2" Content="e^x" FontSize="20" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Checked="RadioButton_Checked_2"/>
     </Grid>
 </Page>
