@@ -11,14 +11,17 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="125"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -28,6 +31,29 @@
             <ColumnDefinition Width="100"/>
             <ColumnDefinition Width="200"/>
         </Grid.ColumnDefinitions>
-        <WindowsFormsHost Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="200" VerticalAlignment="Center" Width="200" Grid.RowSpan="7"/>
+        <Image Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Source="/Image/Image4.png" Height="120" Margin="20" HorizontalAlignment="Center"/>
+        <TextBox x:Name="x0" Grid.Row="1" Grid.Column="1" Height="20" Width="80" />
+        <TextBox x:Name="xk" Grid.Row="2" Grid.Column="1" Height="20" Width="80" />
+        <TextBox x:Name="dx" Grid.Row="3" Grid.Column="1" Height="20" Width="80" />
+        <TextBox x:Name="d" Grid.Row="4" Grid.Column="1" Height="20" Width="80" />
+        <TextBox x:Name="answer" Grid.Row="5" Grid.Column="1" Grid.RowSpan="4" Width="80" />
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="x0" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="xk" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="dx" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="d" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Ответ" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Пример 3" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+        <Button Grid.Row="9" Grid.Column="1" Content="Вычислить" Height="20" Width="80" Click="Button_Click"/>
+        <Button Grid.Row="9" Grid.Column="2" Content="Очистить" Height="20" Width="80" Click="Button_Click_1"/>
+        <Button Grid.Row="9" Grid.Column="4" Content="На главную" Height="20" Width="80" HorizontalAlignment="Left" Click="Button_Click_3" Margin="0,3,0,0" VerticalAlignment="Top"/>
+        <WindowsFormsHost Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="8">
+            <charts:Chart x:Name="ChartPayments">
+                <charts:Chart.Legends>
+                    <charts:Legend>
+
+                    </charts:Legend>
+                </charts:Chart.Legends>
+            </charts:Chart>
+        </WindowsFormsHost>
     </Grid>
 </Page>
