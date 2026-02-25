@@ -29,7 +29,7 @@
         <Image Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Source="/Image/Image1.png" Height="80" Margin="20"/>
         <TextBox x:Name="x" Grid.Row="1" Grid.Column="2" Height="20" Width="80"/>
         <TextBox x:Name="y" Grid.Row="2" Grid.Column="2" Height="20" Width="80"/>
-        <TextBox x:Name="z" Grid.Row="3" Grid.Column="2" Height="20" Width="80"/>
+        <TextBox x:Name="z" Grid.Row="3" Grid.Column="2" Height="20" Width="80" ToolTip="Для расчета арксинуса можно вписать только -1, 0 и 1"/>
         <TextBox x:Name="answer" Grid.Row="4" Grid.Column="2" Height="20" Width="80"/>
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Пример 1" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <TextBlock Grid.Row="1" Grid.Column="1" Text="x" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>

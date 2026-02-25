@@ -34,7 +34,11 @@ namespace WpfApp1.Pages
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            x0.Text = String.Empty;
+            xk.Text = String.Empty;
+            dx.Text = String.Empty;
+            d.Text = String.Empty;
+            answer.Text = String.Empty;
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)

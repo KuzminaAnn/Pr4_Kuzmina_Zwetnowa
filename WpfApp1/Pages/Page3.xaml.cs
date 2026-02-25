@@ -37,6 +37,7 @@ namespace WpfApp1.Pages
         {
             b.Text = String.Empty;
             x.Text = String.Empty;
+            answer.Text = String.Empty;
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)

@@ -41,6 +41,7 @@ namespace WpfApp1.Pages
             x.Text = String.Empty;
             y.Text = String.Empty;
             z.Text = String.Empty;
+            answer.Text = String.Empty;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
