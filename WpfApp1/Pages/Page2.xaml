@@ -15,7 +15,8 @@
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
-            <RowDefinition Height="200"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="185"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -30,11 +31,14 @@
         <TextBox x:Name="y" Grid.Row="2" Grid.Column="2" Height="20" Width="80"/>
         <TextBox x:Name="z" Grid.Row="3" Grid.Column="2" Height="20" Width="80"/>
         <TextBox x:Name="answer" Grid.Row="4" Grid.Column="2" Height="20" Width="80"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Пример 1" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <TextBlock Grid.Row="1" Grid.Column="1" Text="x" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <TextBlock Grid.Row="2" Grid.Column="1" Text="y" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <TextBlock Grid.Row="3" Grid.Column="1" Text="z" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <TextBlock Grid.Row="4" Grid.Column="1" Text="Ответ:" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <Button Grid.Row="3" Grid.Column="3" Content="Вычислить" Height="20" Width="80" Click="Button_Click"/>
         <Button Grid.Row="4" Grid.Column="3" Content="Очистить" Height="20" Width="80" Click="Button_Click_1"/>
+        <Button Grid.Row="5" Grid.Column="4" Content="Далее" Height="20" Width="80" Click="Button_Click_2"/>
+        <Button Grid.Row="5" Grid.Column="5" Content="На главную" Height="20" Width="80" HorizontalAlignment="Left" Click="Button_Click_3"/>
     </Grid>
 </Page>

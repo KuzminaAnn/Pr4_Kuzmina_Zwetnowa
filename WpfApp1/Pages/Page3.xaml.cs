@@ -35,7 +35,8 @@ namespace WpfApp1.Pages
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            b.Text = String.Empty;
+            x.Text = String.Empty;
         }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
@@ -91,6 +92,23 @@ namespace WpfApp1.Pages
             else
             {
                 Class1.otv = (float)(2 * Pow(Exp(xx), 2));
+            }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Page4());
+            if (NavigationService.CanGoForward)
+            {
+                NavigationService.GoForward();
+            }
+        }
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Page1());
+            if (NavigationService.CanGoForward)
+            {
+                NavigationService.GoForward();
             }
         }
     }

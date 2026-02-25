@@ -17,7 +17,8 @@
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="25"/>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="125"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -31,11 +32,14 @@
         <TextBox x:Name="x" Grid.Row="1" Grid.Column="2" Height="20" Width="80" />
         <TextBox x:Name="b" Grid.Row="2" Grid.Column="2" Height="20" Width="80" />
         <TextBox x:Name="answer" Grid.Row="6" Grid.Column="2" Height="20" Width="80" />
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Пример 2" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <TextBlock Grid.Row="1" Grid.Column="1" Text="x" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <TextBlock Grid.Row="2" Grid.Column="1" Text="b" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <TextBlock Grid.Row="6" Grid.Column="1" Text="Ответ:" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <Button Grid.Row="5" Grid.Column="3" Content="Вычислить" Height="20" Width="80" Click="Button_Click"/>
         <Button Grid.Row="6" Grid.Column="3" Content="Очистить" Height="20" Width="80" Click="Button_Click_1"/>
+        <Button Grid.Row="7" Grid.Column="4" Content="Далее" Height="20" Width="80" Click="Button_Click_2"/>
+        <Button Grid.Row="7" Grid.Column="5" Content="На главную" Height="20" Width="80" HorizontalAlignment="Left" Click="Button_Click_3"/>
         <RadioButton Grid.Row="3" Grid.Column="2" Content="(sh)x" FontSize="20" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Checked="RadioButton_Checked"/>
         <RadioButton Grid.Row="4" Grid.Column="2" Content="x^2" FontSize="20" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Checked="RadioButton_Checked_1"/>
         <RadioButton Grid.Row="5" Grid.Column="2" Content="e^x" FontSize="20" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Checked="RadioButton_Checked_2"/>
