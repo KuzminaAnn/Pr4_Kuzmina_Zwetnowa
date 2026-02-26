@@ -36,7 +36,7 @@
         <TextBox x:Name="xk" Grid.Row="2" Grid.Column="1" Height="20" Width="80" />
         <TextBox x:Name="dx" Grid.Row="3" Grid.Column="1" Height="20" Width="80" />
         <TextBox x:Name="d" Grid.Row="4" Grid.Column="1" Height="20" Width="80" />
-        <TextBox x:Name="answer" Grid.Row="5" Grid.Column="1" Grid.RowSpan="4" Width="80" />
+        <TextBox x:Name="answer" Grid.Row="5" Grid.Column="1" Grid.RowSpan="4" Width="80" IsReadOnly="True"/>
         <TextBlock Grid.Row="1" Grid.Column="0" Text="x0" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <TextBlock Grid.Row="2" Grid.Column="0" Text="xk" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <TextBlock Grid.Row="3" Grid.Column="0" Text="dx" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>

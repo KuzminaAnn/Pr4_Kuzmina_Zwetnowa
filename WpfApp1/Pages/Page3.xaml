@@ -31,7 +31,7 @@
         <Image Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Source="/Image/Image2.png" Height="120" Margin="20" HorizontalAlignment="Center"/>
         <TextBox x:Name="x" Grid.Row="1" Grid.Column="2" Height="20" Width="80" />
         <TextBox x:Name="b" Grid.Row="2" Grid.Column="2" Height="20" Width="80" />
-        <TextBox x:Name="answer" Grid.Row="6" Grid.Column="2" Height="20" Width="80" />
+        <TextBox x:Name="answer" Grid.Row="6" Grid.Column="2" Height="20" Width="80" IsReadOnly="True"/>
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Пример 2" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <TextBlock Grid.Row="1" Grid.Column="1" Text="x" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <TextBlock Grid.Row="2" Grid.Column="1" Text="b" FontSize="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
