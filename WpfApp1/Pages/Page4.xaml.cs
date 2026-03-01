@@ -25,9 +25,11 @@ namespace WpfApp1.Pages
     {
         private SeriesChartType currentType; //new
         List<Point> points = new List<Point>();
+        public static float a;
         public Page4()
         {
             InitializeComponent();
+            
             ChartPayments.ChartAreas.Add(new ChartArea("Main"));
             var currentSeries = new Series("График")
 {
@@ -48,20 +50,24 @@ namespace WpfApp1.Pages
             {
                 while (xx0 <= xxk)
                 {
-                    Class1.otv = (float)(Pow(xx0, 2) + Tan(5 * xx0 + (dd / xx0)));
-                    answer.Text = Convert.ToString(Class1.otv);
-                    points.Add(new Point (xx0, Class1.otv));
+                    a = (float)(Pow(xx0, 2) + Tan(5 * xx0 + (dd / xx0)));
+                    answer.Text = Convert.ToString(a);
+                    points.Add(new Point (xx0, a));
                     xx0 += dxx;
                 };
             }
             else 
             {
-                Class1.otv = (float)(Pow(xxk, 2) + Tan(5 * xxk + (dd / xxk)));
-                answer.Text = Convert.ToString(Class1.otv);
-                points.Add(new Point(xxk, Class1.otv));
-                xxk += dxx;
+                while (xxk >= xx0)
+                {
+                    a = (float)(Pow(xxk, 2) + Tan(5 * xxk + (dd / xxk)));
+                    answer.Text = Convert.ToString(a);
+                    points.Add(new Point(xxk, a));
+                    xxk -= dxx;
+                }
+                    
             }
-                Series currentSeries = ChartPayments.Series.FirstOrDefault();
+            Series currentSeries = ChartPayments.Series.FirstOrDefault();
             currentSeries.ChartType = currentType;
             currentSeries.Points.Clear();
             //var categoriesList = _context.Category.ToList();
