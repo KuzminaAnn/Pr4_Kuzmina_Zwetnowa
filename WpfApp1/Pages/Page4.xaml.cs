@@ -31,30 +31,38 @@ namespace WpfApp1.Pages
             InitializeComponent();
             
             ChartPayments.ChartAreas.Add(new ChartArea("Main"));
-            var currentSeries = new Series("График")
-{
-                IsValueShownAsLabel = true
-}
-            ;
+            var currentSeries = new Series("График");
+            currentSeries.Points.Clear();
+//{
+//                IsValueShownAsLabel = true
+//};
+
+            currentType = SeriesChartType.Line; //new
             ChartPayments.Series.Add(currentSeries);
-            currentType = SeriesChartType.Column; //new
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Series currentSeries = ChartPayments.Series.FirstOrDefault();
+            currentSeries.ChartType = SeriesChartType.Line;
+            
             float.TryParse(x0.Text, out float xx0);
             float.TryParse(xk.Text, out float xxk);
             float.TryParse(dx.Text, out float dxx);
             float.TryParse(d.Text, out float dd);
+            int ass = 0;
             if (xx0 <= xxk)
             {
-                while (xx0 <= xxk)
+                while (ass != 5)
                 {
                     a = (float)(Pow(xx0, 2) + Tan(5 * xx0 + (dd / xx0)));
                     answer.Text = Convert.ToString(a);
                     points.Add(new Point (xx0, a));
                     xx0 += dxx;
-                };
+                    ass += 1;
+                    currentSeries.Points.Clear();
+                }
+                ;
             }
             else 
             {
@@ -64,20 +72,17 @@ namespace WpfApp1.Pages
                     answer.Text = Convert.ToString(a);
                     points.Add(new Point(xxk, a));
                     xxk -= dxx;
+                    currentSeries.Points.Clear();
                 }
                     
-            }
-            Series currentSeries = ChartPayments.Series.FirstOrDefault();
-            currentSeries.ChartType = currentType;
-            currentSeries.Points.Clear();
-            //var categoriesList = _context.Category.ToList();
+            }          
             foreach (var p in points)
             {
-                currentSeries.Points.AddXY(p);
-                //    (category.Name,
-                //_context.Payment.ToList().Where(u => u.User == currentUser
-                //&& u.Category == category).Sum(u => u.Price * u.Num));
+                var dataPoint = new DataPoint(p.X, p.Y);
+                currentSeries.Points.Add(dataPoint);
             }
+            currentSeries.Points.Clear();
+            ChartPayments.Invalidate();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
