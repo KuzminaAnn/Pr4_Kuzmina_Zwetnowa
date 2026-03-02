@@ -25,7 +25,7 @@ namespace WpfApp1.Pages
     {
         private SeriesChartType currentType; //new
         List<Point> points = new List<Point>();
-        public static float a;
+        List<float> a = new List<float>();
         public Page4()
         {
             InitializeComponent();
@@ -50,17 +50,15 @@ namespace WpfApp1.Pages
             float.TryParse(xk.Text, out float xxk);
             float.TryParse(dx.Text, out float dxx);
             float.TryParse(d.Text, out float dd);
-            int ass = 0;
             if (xx0 <= xxk)
             {
-                while (ass != 5)
+                while (xx0 <= xxk)
                 {
-                    a = (float)(Pow(xx0, 2) + Tan(5 * xx0 + (dd / xx0)));
-                    answer.Text = Convert.ToString(a);
-                    points.Add(new Point (xx0, a));
+                    Class1.otv = (float)(Pow(xx0, 2) + Tan(5 * xx0 + (dd / xx0)));
+                    a.Add(Class1.otv);
+                    points.Add(new Point (xx0, Class1.otv));
                     xx0 += dxx;
-                    ass += 1;
-                    currentSeries.Points.Clear();
+                    currentSeries.Points.Clear();      
                 }
                 ;
             }
@@ -68,9 +66,9 @@ namespace WpfApp1.Pages
             {
                 while (xxk >= xx0)
                 {
-                    a = (float)(Pow(xxk, 2) + Tan(5 * xxk + (dd / xxk)));
-                    answer.Text = Convert.ToString(a);
-                    points.Add(new Point(xxk, a));
+                    Class1.otv = (float)(Pow(xx0, 2) + Tan(5 * xx0 + (dd / xx0)));
+                    a.Add(Class1.otv);
+                    points.Add(new Point(xxk, Class1.otv));
                     xxk -= dxx;
                     currentSeries.Points.Clear();
                 }
@@ -83,6 +81,7 @@ namespace WpfApp1.Pages
             }
             currentSeries.Points.Clear();
             ChartPayments.Invalidate();
+            answer.Text = Convert.ToString(a);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
