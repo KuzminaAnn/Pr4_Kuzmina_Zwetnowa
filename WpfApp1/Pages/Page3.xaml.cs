@@ -24,22 +24,32 @@ namespace WpfApp1.Pages
         public Page3()
         {
             InitializeComponent();
-            
-
         }
-
+        /// <summary>
+        /// Этот метод выводит ответ
+        /// </summary>
+        /// <param name="sender">ссылка на кнопку</param>
+        /// <param name="e">данные кнопки</param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             answer.Text = Convert.ToString(Class1.otv);
         }
-
+        /// <summary>
+        /// Этот метод очищает поля ввода и вывода
+        /// </summary>
+        /// <param name="sender">ссылка на кнопку</param>
+        /// <param name="e">данные кнопки</param>
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             b.Text = String.Empty;
             x.Text = String.Empty;
             answer.Text = String.Empty;
         }
-
+        /// <summary>
+        /// Этот метод принимает введенные пользователем данные и выводит ответ
+        /// </summary>
+        /// <param name="sender">ссылка на кнопку</param>
+        /// <param name="e">данные кнопки</param>
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             float.TryParse(b.Text, out float bb);
@@ -47,7 +57,11 @@ namespace WpfApp1.Pages
 
             Math21(bb, xx);
         }
-
+        /// <summary>
+        /// Этот метод принимает введенные пользователем данные и выводит ответ
+        /// </summary>
+        /// <param name="sender">ссылка на кнопку</param>
+        /// <param name="e">данные кнопки</param>
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
             float.TryParse(b.Text, out float bb);
@@ -55,6 +69,11 @@ namespace WpfApp1.Pages
 
             Math22(bb, xx);
         }
+        /// <summary>
+        /// Этот метод принимает введенные пользователем данные и выводит ответ
+        /// </summary>
+        /// <param name="sender">ссылка на кнопку</param>
+        /// <param name="e">данные кнопки</param>
         private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
         {
             float.TryParse(b.Text, out float bb);
@@ -62,7 +81,11 @@ namespace WpfApp1.Pages
 
             Math23(bb, xx);
         }
-
+        /// <summary>
+        /// Этот метод переносит пользователя на Page4 с примером номер 3
+        /// </summary>
+        /// <param name="sender">ссылка на кнопку</param>
+        /// <param name="e">данные кнопки</param>
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Page4());
@@ -71,6 +94,11 @@ namespace WpfApp1.Pages
                 NavigationService.GoForward();
             }
         }
+        /// <summary>
+        /// Этот метод переносит пользователя на Page1 на главную страницу
+        /// </summary>
+        /// <param name="sender">ссылка на кнопку</param>
+        /// <param name="e">данные кнопки</param>
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Page1());
@@ -79,7 +107,12 @@ namespace WpfApp1.Pages
                 NavigationService.GoForward();
             }
         }
-
+        /// <summary>
+        /// Этот метод вычисляет ответ
+        /// </summary>
+        /// <param name="bb">Переменная b в уравнении</param>
+        /// <param name="xx">Переменная х в уравнении</param>
+        /// <returns>Выводит true</returns>
         public bool Math21(float bb, float xx)
         {
             if (0.5 < xx * bb && xx * bb < 10)
@@ -96,6 +129,12 @@ namespace WpfApp1.Pages
             }
             return true;
         }
+        /// <summary>
+        /// Этот метод вычисляет ответ
+        /// </summary>
+        /// <param name="bb">Переменная b в уравнении</param>
+        /// <param name="xx">Переменная х в уравнении</param>
+        /// <returns>Выводит true</returns>
         public bool Math22(float bb, float xx)
         {
             if (0.5 < xx * bb && xx * bb < 10)
@@ -112,6 +151,12 @@ namespace WpfApp1.Pages
             }
             return true;
         }
+        /// <summary>
+        /// Этот метод вычисляет ответ
+        /// </summary>
+        /// <param name="bb">Переменная b в уравнении</param>
+        /// <param name="xx">Переменная х в уравнении</param>
+        /// <returns>Выводит true</returns>
         public bool Math23(float bb, float xx)
         {
             if (0.5 < xx * bb && xx * bb < 10)

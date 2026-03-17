@@ -37,7 +37,11 @@ namespace WpfApp1.Pages
             currentType = SeriesChartType.Line; //new
             ChartPayments.Series.Add(currentSeries);
         }
-
+        /// <summary>
+        /// Этот метод принимает введенные пользователем данные и выводит ответ 
+        /// </summary>
+        /// <param name="sender">ссылка на кнопку</param>
+        /// <param name="e">данные кнопки</param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             float.TryParse(x0.Text, out float xx0);
@@ -47,7 +51,11 @@ namespace WpfApp1.Pages
 
             Math3(xx0, xxk, dxx, dd);
         }
-
+        /// <summary>
+        /// Этот метод очищает поля ввода и вывода
+        /// </summary>
+        /// <param name="sender">ссылка на кнопку</param>
+        /// <param name="e">данные кнопки</param>
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             x0.Text = String.Empty;
@@ -57,7 +65,11 @@ namespace WpfApp1.Pages
             answer.Text = String.Empty;
             points.Clear();
         }
-
+        /// <summary>
+        /// Этот метод переносит пользователя на Page1 на главную страницу
+        /// </summary>
+        /// <param name="sender">ссылка на кнопку</param>
+        /// <param name="e">данные кнопки</param>
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Page1());
@@ -66,6 +78,14 @@ namespace WpfApp1.Pages
                 NavigationService.GoForward();
             }
         }
+        /// <summary>
+        /// Этот метод вычисляет ответ
+        /// </summary>
+        /// <param name="xx0">Переменная x0 в уравнении</param>
+        /// <param name="xxk">Переменная xk в уравнении</param>
+        /// <param name="dxx">Переменная dx в уравнении</param>
+        /// <param name="dd">Переменная d в уравнении</param>
+        /// <returns>Выводит true</returns>
         public bool Math3(float xx0, float xxk, float dxx, float dd)
         {
             Series currentSeries = ChartPayments.Series.FirstOrDefault();
