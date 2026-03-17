@@ -7,9 +7,9 @@
 Кузьмина Анна и Цветнова Арина 3ИСИП-423
 
 Вариант №6
-1. ![1](/Image/Image1.png)
-2. ![2](/Image/Image2.png)
-3. ![3](./Image/image4.png)
+1. ![1](https://github.com/KuzminaAnn/Pr4_Kuzmina_Zwetnowa/blob/master/WpfApp1/Image/Image1.png)
+2. ![2](https://github.com/KuzminaAnn/Pr4_Kuzmina_Zwetnowa/blob/master/WpfApp1/Image/Image2.png)
+3. ![3](https://github.com/KuzminaAnn/Pr4_Kuzmina_Zwetnowa/blob/master/WpfApp1/Image/Image3.png)
 
 Для написания программы была выбранна среда программирования "Microsoft Visual Studio" как самая адаптивная среда из имеющихся 
 для выбранного нами языка программирования. Разработка происходила в приложении "WPFApp" для болеее отзывчивого и удобного пользовательского интерфейса.
@@ -23,3 +23,23 @@
 
 Комментарий:график на 4 странице не запускается и соответственно данные в ячейку ответ не выводяться, по неизвестным нам причинам происходит вечный рассчет координат
 (мы предполагаем, что дело в прерывном графике из-за тангенса)
+
+# Практичсекая работа №6 часть 2
+
+Работа приложения при решении уравнения №1:
+
+![1](https://github.com/KuzminaAnn/Pr4_Kuzmina_Zwetnowa/blob/master/WpfApp1/Image/%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%20%D0%BF%D1%801.png)
+
+Работа приложения при решении уравнения №2:
+
+![1](https://github.com/KuzminaAnn/Pr4_Kuzmina_Zwetnowa/blob/master/WpfApp1/Image/%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%20%D0%BF%D1%802.png)
+
+Работа приложения при решении уравнения №3:
+
+![1](https://github.com/KuzminaAnn/Pr4_Kuzmina_Zwetnowa/blob/master/WpfApp1/Image/%D1%80%D0%B5%D0%B7%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%82%20%D0%BF%D1%803.png)
+
+Окно "Обозревателя тестов" с тестированием корректности решений трёх наших страниц:
+
+![1](https://github.com/KuzminaAnn/Pr4_Kuzmina_Zwetnowa/blob/master/WpfApp1/Image/%D0%BE%D0%B1%D0%BE%D0%B7%D1%80%D0%B5%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%20%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2.png)
+
+Вывод: 
