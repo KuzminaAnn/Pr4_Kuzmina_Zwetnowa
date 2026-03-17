@@ -32,8 +32,7 @@ namespace WpfApp1.Pages
             float.TryParse(y.Text, out float yy);
             float.TryParse(z.Text, out float zz);
 
-            Class1.otv = (float)(Pow(10 * (Pow(xx, 1/3) + Pow(xx, yy + 2)), 0.5) * (Pow(Asin(zz), 2) - Abs(xx - yy)));
-            answer.Text = Convert.ToString(Class1.otv);
+            Math1(xx, yy, zz);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -60,6 +59,13 @@ namespace WpfApp1.Pages
             {
                 NavigationService.GoForward();
             }
+        }
+
+        public bool Math1 (float xx, float yy, float zz)
+        {
+            Class1.otv = (float)(Pow(10 * (Pow(xx, 1 / 3) + Pow(xx, yy + 2)), 0.5) * (Pow(Asin(zz), 2) - Abs(xx - yy)));
+            answer.Text = Convert.ToString(Class1.otv);
+            return true;
         }
     }
 }

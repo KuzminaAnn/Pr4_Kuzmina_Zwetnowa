@@ -45,18 +45,7 @@ namespace WpfApp1.Pages
             float.TryParse(b.Text, out float bb);
             float.TryParse(x.Text, out float xx);
 
-            if (0.5 < xx * bb && xx * bb < 10)
-            {
-                Class1.otv = (float)Exp(Sinh(xx) - Abs(bb));
-            }
-            else if (0.1 < xx * bb && xx * bb < 0.5)
-            {
-                Class1.otv = (float)Pow(Abs(Sinh(xx) + bb), 0.5);
-            }
-            else
-            {
-                Class1.otv = (float)(2 * Pow(Sinh(xx), 2));
-            }
+            Math21(bb, xx);
         }
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
@@ -64,36 +53,14 @@ namespace WpfApp1.Pages
             float.TryParse(b.Text, out float bb);
             float.TryParse(x.Text, out float xx);
 
-            if (0.5 < xx * bb && xx * bb < 10)
-            {
-                Class1.otv = (float)Exp(Pow(xx, 2) - Abs(bb));
-            }
-            else if (0.1 < xx * bb && xx * bb < 0.5)
-            {
-                Class1.otv = (float)Pow(Abs(Pow(xx, 2) + bb), 0.5);
-            }
-            else
-            {
-                Class1.otv = (float)(2 * Pow(Pow(xx, 2), 2));
-            }
+            Math22(bb, xx);
         }
         private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
         {
             float.TryParse(b.Text, out float bb);
             float.TryParse(x.Text, out float xx);
 
-            if (0.5 < xx * bb && xx * bb < 10)
-            {
-                Class1.otv = (float)Exp(Exp(xx) - Abs(bb));
-            }
-            else if (0.1 < xx * bb && xx * bb < 0.5)
-            {
-                Class1.otv = (float)Pow(Abs(Exp(xx) + bb), 0.5);
-            }
-            else
-            {
-                Class1.otv = (float)(2 * Pow(Exp(xx), 2));
-            }
+            Math23(bb, xx);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -111,6 +78,55 @@ namespace WpfApp1.Pages
             {
                 NavigationService.GoForward();
             }
+        }
+
+        public bool Math21(float bb, float xx)
+        {
+            if (0.5 < xx * bb && xx * bb < 10)
+            {
+                Class1.otv = (float)Exp(Sinh(xx) - Abs(bb));
+            }
+            else if (0.1 < xx * bb && xx * bb < 0.5)
+            {
+                Class1.otv = (float)Pow(Abs(Sinh(xx) + bb), 0.5);
+            }
+            else
+            {
+                Class1.otv = (float)(2 * Pow(Sinh(xx), 2));
+            }
+            return true;
+        }
+        public bool Math22(float bb, float xx)
+        {
+            if (0.5 < xx * bb && xx * bb < 10)
+            {
+                Class1.otv = (float)Exp(Pow(xx, 2) - Abs(bb));
+            }
+            else if (0.1 < xx * bb && xx * bb < 0.5)
+            {
+                Class1.otv = (float)Pow(Abs(Pow(xx, 2) + bb), 0.5);
+            }
+            else
+            {
+                Class1.otv = (float)(2 * Pow(Pow(xx, 2), 2));
+            }
+            return true;
+        }
+        public bool Math23(float bb, float xx)
+        {
+            if (0.5 < xx * bb && xx * bb < 10)
+            {
+                Class1.otv = (float)Exp(Exp(xx) - Abs(bb));
+            }
+            else if (0.1 < xx * bb && xx * bb < 0.5)
+            {
+                Class1.otv = (float)Pow(Abs(Exp(xx) + bb), 0.5);
+            }
+            else
+            {
+                Class1.otv = (float)(2 * Pow(Exp(xx), 2));
+            }
+            return true;
         }
     }
 }
