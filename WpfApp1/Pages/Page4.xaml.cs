@@ -33,9 +33,6 @@ namespace WpfApp1.Pages
             ChartPayments.ChartAreas.Add(new ChartArea("Main"));
             var currentSeries = new Series("График");
             currentSeries.Points.Clear();
-//{
-//                IsValueShownAsLabel = true
-//};
 
             currentType = SeriesChartType.Line; //new
             ChartPayments.Series.Add(currentSeries);
@@ -43,45 +40,12 @@ namespace WpfApp1.Pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Series currentSeries = ChartPayments.Series.FirstOrDefault();
-            currentSeries.ChartType = SeriesChartType.Line;
-            
             float.TryParse(x0.Text, out float xx0);
             float.TryParse(xk.Text, out float xxk);
             float.TryParse(dx.Text, out float dxx);
             float.TryParse(d.Text, out float dd);
-            if (xx0 <= xxk)
-            {
-                while (xx0 <= xxk)
-                {
-                    Class1.otv = (float)(Pow(xx0, 2) + Tan(5 * xx0 + (dd / xx0)));
-                    a.Add(Class1.otv);
-                    points.Add(new Point (xx0, Class1.otv));
-                    xx0 += dxx;
-                    currentSeries.Points.Clear();      
-                }
-                ;
-            }
-            else 
-            {
-                while (xxk >= xx0)
-                {
-                    Class1.otv = (float)(Pow(xx0, 2) + Tan(5 * xx0 + (dd / xx0)));
-                    a.Add(Class1.otv);
-                    points.Add(new Point(xxk, Class1.otv));
-                    xxk -= dxx;
-                    currentSeries.Points.Clear();
-                }
-                    
-            }          
-            foreach (var p in points)
-            {
-                var dataPoint = new DataPoint(p.X, p.Y);
-                currentSeries.Points.Add(dataPoint);
-            }
-            currentSeries.Points.Clear();
-            ChartPayments.Invalidate();
-            answer.Text = Convert.ToString(a);
+
+            Math3(xx0, xxk, dxx, dd);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -101,6 +65,44 @@ namespace WpfApp1.Pages
             {
                 NavigationService.GoForward();
             }
+        }
+        public bool Math3(float xx0, float xxk, float dxx, float dd)
+        {
+            Series currentSeries = ChartPayments.Series.FirstOrDefault();
+            currentSeries.ChartType = SeriesChartType.Line;
+            if (xx0 <= xxk)
+            {
+                while (xx0 <= xxk)
+                {
+                    Class1.otv = (float)(Pow(xx0, 2) + Tan(5 * xx0 + (dd / xx0)));
+                    a.Add(Class1.otv);
+                    points.Add(new Point(xx0, Class1.otv));
+                    xx0 += dxx;
+                    currentSeries.Points.Clear();
+                }
+                ;
+            }
+            else
+            {
+                while (xxk >= xx0)
+                {
+                    Class1.otv = (float)(Pow(xx0, 2) + Tan(5 * xx0 + (dd / xx0)));
+                    a.Add(Class1.otv);
+                    points.Add(new Point(xxk, Class1.otv));
+                    xxk -= dxx;
+                    currentSeries.Points.Clear();
+                }
+
+            }
+            foreach (var p in points)
+            {
+                var dataPoint = new DataPoint(p.X, p.Y);
+                currentSeries.Points.Add(dataPoint);
+            }
+            currentSeries.Points.Clear();
+            ChartPayments.Invalidate();
+            answer.Text = Convert.ToString(a);
+            return true;
         }
     }
 }
